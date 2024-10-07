@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#admin-content {
+    padding: 20px;
+}
+
+h1.admin-heading {
+    color: #007bff;
+}
+
+.container {
+    background: white;
+    border-radius: 5px;
+    display: flow-root;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.content-table th, .content-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.content-table img {
+    border-radius: 5px;
+}
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination li a:hover {
+    background: #0056b3;
+}
+
+.pagination li.active a {
+    background: #0056b3;
+}
+
+.add-new {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.add-new:hover {
+    background: #218838;
+}
+
+.edit, .delete {
+    text-align: center;
+}
+
+.edit a, .delete a {
+    color: #007bff;
+}
+
+.edit a:hover, .delete a:hover {
+    color: #0056b3;
+}
+
+.content-table img {
+    width: 50px; /* Ajusta el ancho según sea necesario */
+    height: 50px; /* Ajusta el alto según sea necesario */
+    object-fit: cover; /* Esto recortará la imagen para que se ajuste al contenedor */
+    border-radius: 5px; /* Mantiene el estilo anterior */
+}
+
+.content-table th, .content-table td {
+    padding: 10px; /* Espacio dentro de las celdas */
+    text-align: center; /* Centra el contenido */
+    border-bottom: 1px solid #ddd;
+}
+
+.content-table {
+    border-spacing: 0 10px; /* Espacio entre filas (ajusta según sea necesario) */
+}
+
+.button-container {
+    margin-bottom: 20px; /* Espacio debajo del botón */
+}
+
+.logo-admin {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+    margin: 20px 0; /* Espacio arriba y abajo del logo */
+}
+
+.logo {
+    max-width: 25%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.col-md-offset-9 {
+    text-align: right; /* Alinear el contenido a la derecha */
+    margin-top: 20px; /* Espacio arriba */
+}
+
+.col-md-offset-9 p {
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    margin: 0; /* Eliminar margen por defecto */
+}
+
+.admin-logout {
+    background-color: #858585; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Permite aplicar padding y márgenes */
+    transition: background-color 0.3s; /* Transición suave para hover */
+    margin-top: 10px; /* Espacio encima del botón */
+}
+
+.admin-logout:hover {
+    background-color: #c82333; /* Color de fondo al pasar el mouse */
+}
+
+
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white; /* Fondo blanco para la tabla */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.content-table th, .content-table td {
+    padding: 12px; /* Espacio dentro de las celdas */
+    text-align: center; /* Centra el contenido */
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+.content-table th {
+    background-color: #007bff; /* Color de fondo para encabezados */
+    color: white; /* Color del texto en encabezados */
+}
+
+.content-table img {
+    width: 50px; /* Ajusta el ancho según sea necesario */
+    height: 50px; /* Ajusta el alto según sea necesario */
+    object-fit: cover; /* Recorta la imagen para ajustarse */
+    border-radius: 5px; /* Bordes redondeados para imágenes */
+}
+
+.edit a, .delete a {
+    color: #007bff; /* Color de enlace para edición y eliminación */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.edit a:hover, .delete a:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Color de fondo al pasar el mouse */
+}
+
+.button-container {
+    margin-bottom: 20px; /* Espacio debajo del botón */
+}
+
+/* Asegúrate de mantener los estilos de paginación y otros elementos coherentes */
+.pagination {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination li a:hover {
+    background: #0056b3;
+}
+
+.pagination li.active a {
+    background: #0056b3;
+}
+
+.button-container {
+    margin-bottom: 20px; /* Asegura que haya espacio debajo del botón */
+    display: flex; /* Para alinear elementos si es necesario */
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+}
+
+.add-new {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.content-table {
+    margin-top: 20px; /* Espacio entre el botón y la tabla */
+}

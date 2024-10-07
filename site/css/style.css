@@ -1,0 +1,819 @@
+/* Estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'AMSIPRO';
+    /* Nombre de la fuente */
+    src: url('Types/AmsiProCond-Black.ttf') format('woff2'),
+        /* Ruta a la fuente en formato WOFF2 */
+        url('Types/AmsiProCond-Regular.ttf') format('woff');
+    /* Ruta a la fuente en formato WOFF */
+    font-weight: normal;
+    /* Puedes ajustar el peso de la fuente según tus necesidades */
+    font-style: normal;
+    /* Puedes ajustar el estilo de la fuente (normal, italic, oblique) */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    background-image: linear-gradient(45deg, #ffffff, #e0e0e0);
+    min-height: 100vh;
+    position: relative;
+    /* Para el posicionamiento del pseudo-elemento */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/imgf.png');
+    background-repeat: repeat;
+    /*background-size: cover; Asegúrate de que la imagen cubra todo el fondo */
+    z-index: -1;
+    /* Asegúrate de que esté detrás de otros elementos */
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(236, 236, 236, 0.9);
+    /* Color rojo con 50% de opacidad */
+    filter: blur(10px);
+    /* Ajusta el valor de blur según lo necesites */
+    z-index: -1;
+    /* Asegúrate de que esté por encima de la imagen de fondo */
+}
+
+
+
+/* Estilos del header */
+header {
+    position: absolute;
+    top: 370px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #54A5DB;
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav-list li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 20px;
+    /* Espaciado entre secciones */
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: background 0.3s;
+}
+
+.nav-list li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+
+/*logo*/
+.container {
+    position: relative;
+    /* Permite posicionar elementos hijos en relación a este contenedor */
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho */
+    overflow: hidden;
+    /* Opcional, evita desbordamientos */
+}
+
+.enc {
+    width: 100%;
+    /* Hace que la primera imagen ocupe todo el ancho del contenedor */
+    height: 300px;
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+
+
+.logohd {
+    width: 300px;
+    padding-bottom: 25px;
+    position: absolute;
+    /* Permite posicionar la segunda imagen sobre la primera */
+    top: 50%;
+    /* Centra verticalmente */
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta la posición para centrar completamente */
+}
+
+.logo {
+    max-width: 100%;
+    /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+
+/* Estilo para las imágenes de redes sociales */
+.container-redes {
+    max-width: 1200px;
+    /* Ancho máximo de 1200px */
+    margin: 0 auto;
+    /* Centra horizontalmente el contenedor */
+    display: flex;
+    /* Usar flexbox para centrar el contenido */
+    justify-content: center;
+    /* Centra horizontalmente el contenido dentro del contenedor */
+    align-items: center;
+    /* Centra verticalmente el contenido dentro del contenedor */
+    padding-bottom: 25px;
+}
+
+.red {
+    display: flex;
+    flex-direction: column;
+    /* Mantiene el contenedor vertical */
+    align-items: center;
+    /* Centra el contenido del red */
+    text-align: center;
+    /* Centra el texto en el contenedor */
+}
+
+.header {
+    display: flex;
+    /* Alinea el texto y los íconos en la misma línea */
+    align-items: center;
+    /* Centra verticalmente el texto y los íconos */
+}
+
+.red p {
+    margin-right: 20px;
+    /* Espacio a la derecha del texto */
+    margin-bottom: 0;
+    /* Elimina el margen inferior del párrafo */
+}
+
+.redes-container {
+    display: flex;
+    /* Alinea horizontalmente los enlaces de redes sociales */
+    gap: 15px;
+    /* Espacio entre los enlaces */
+}
+
+.red a {
+    display: flex;
+    /* Alinea horizontalmente el ícono y el texto */
+    align-items: center;
+    /* Centra verticalmente el ícono y el texto */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+    color: inherit;
+    /* Hereda el color del texto del elemento padre */
+}
+
+.redes {
+    width: 60px;
+    /* Ancho deseado para las imágenes de redes sociales */
+    height: auto;
+    /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+}
+
+.red span {
+    font-size: 16px;
+    /* Ajusta el tamaño de la fuente según tus necesidades */
+    line-height: 1;
+    /* Asegura que la línea sea del tamaño del texto */
+}
+
+
+
+
+/*Busqueda*/
+.busq {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+
+}
+
+#searchForm {
+    display: flex;
+    justify-content: space-between;
+    /* Espaciado uniforme entre elementos */
+    align-items: center;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #c0bfbf;
+    background-color: #ffffff;
+    color: black;
+    margin-right: 5px;
+}
+
+#searchButton {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #54A5DB;
+    color: white;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #1a7ec2;
+    /* Cambia de color al pasar el cursor */
+}
+
+/*Carousel*/
+.carousel-container {
+    max-width: 1100px;
+    /* Se ajusta el ancho del contenedor */
+    margin: 20px auto;
+    margin-top: 95px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.carousel {
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.news-item {
+    display: inline-block;
+    /* Muestra los elementos en línea */
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+    max-width: 100%;
+    height: 650px;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.news-content {
+    margin-top: 10px;
+    /* Espacio encima del contenido */
+    color: #54a5db;
+    /* Color del texto */
+    position: absolute;
+    /* Posiciona el contenido en la parte inferior */
+    bottom: 0;
+    /* Alinea al fondo */
+    left: 0;
+    /* Alinea a la izquierda */
+    right: 0;
+    /* Alinea a la derecha */
+    font-size: 20px;
+    /* Tamaño de fuente */
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+    font-family: "AMSIPRO", sans-serif;
+    /* Fuente */
+    padding: 10px;
+    /* Espacio alrededor del texto */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo con transparencia */
+    border-radius: 0px;
+    /* Bordes redondeados */
+    height: 100px;
+    /* Altura fija del cuadro de texto */
+    overflow: hidden;
+    /* Oculta el texto que excede el cuadro */
+    text-overflow: ellipsis;
+    /* Muestra "..." si el texto es demasiado largo */
+    white-space: nowrap;
+    /* Evita el salto de línea */
+    box-sizing: border-box;
+    /* Incluye el padding en el tamaño total */
+    height: 130px;
+    /* Altura fija del cuadro de texto */
+    overflow: hidden;
+    /* Oculta el texto que excede el cuadro */
+    box-sizing: border-box;
+    /* Incluye el padding en el tamaño total */
+    white-space: normal;
+    /* Permite que el texto se ajuste a varias líneas */
+}
+
+.news-content::before {
+    content: '';
+    /* Necesario para el pseudo-elemento */
+    position: absolute;
+    /* Posiciona la barra */
+    left: 0;
+    /* Alinea a la izquierda */
+    top: 0;
+    /* Alinea al inicio */
+    width: 5px;
+    /* Ancho de la barra */
+    height: 100%;
+    /* Altura completa del contenedor */
+    background-color: #54a5db;
+    /* Color de la barra */
+    margin-right: 10px;
+    /* Espacio entre la barra y el texto */
+}
+
+.news-content p {
+    margin: 0;
+    /* Elimina márgenes del párrafo */
+    text-align: justify;
+    /* Centra el texto horizontalmente */
+    font-weight: 200;
+    /* Cambia el peso de la fuente a más ligero (ajusta según lo que desees) */
+    font-size: 18px;
+    /* Ajusta el tamaño de la fuente según lo necesites */
+    line-height: 1.6;
+    /* Asegura un buen espaciado entre líneas */
+    padding: 5px;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    /* Se redondean los bordes de la imagen */
+}
+
+.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*Notas*/
+
+.barra-titulo {
+
+
+    background-color: #54a5db;
+    /* Color de fondo azul */
+    color: white;
+    /* Color del texto en blanco */
+    height: 50px;
+    /* Altura de la barra */
+    display: flex;
+    /* Usamos flexbox para centrar el texto */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    width: 100%;
+    /* Ocupa todo el ancho de la ventana */
+}
+
+.barra-titulo h1 {
+
+    color: white;
+    /* Cambia el color del texto a blanco */
+    text-decoration: none;
+    /* Quita el subrayado */
+    max-width: 900px;
+    /* Ancho máximo del título */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho permitido */
+    margin: 0;
+    /* Elimina márgenes por defecto del <h1> */
+    text-align: center;
+    /* Centra el texto dentro del h1 */
+    font-size: 24px;
+    /* Tamaño del texto */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+.contenido {
+    max-width: 80%;
+    /* Ancho máximo del contenido */
+    margin: 10px auto;
+    /* Centra el contenido en la página con un margen superior */
+    display: flex;
+    /* Usamos flexbox para alinear los elementos horizontalmente */
+    gap: 70px;
+    /* Espacio entre los elementos */
+}
+
+.contenido .izquierda {
+    flex: 2;
+    /* Parte más grande para el contenido principal */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+    background-color: #f0f0f0;
+    /* Color de fondo de la nota principal */
+    padding: 15px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+.contenido img {
+    width: 100%;
+    /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+    height: auto;
+    /* Mantiene la relación de aspecto de la imagen */
+    aspect-ratio: 16 / 9;
+    /* Establece la relación de aspecto 16:9 */
+    max-width: 100%;
+    /* Asegura que la imagen no exceda el ancho del contenedor */
+}
+
+.contenido h2,
+.nota h3 {
+    /* Aplicar estilos a h2 y h3 */
+    margin: 0 0 10px;
+    /* Margen para el título */
+    font-size: 18px;
+    /* Tamaño del título de la nota */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+.contenido p {
+    font-size: 16px;
+    /* Tamaño del párrafo */
+    line-height: 1.5;
+    /* Altura de línea para mejorar la legibilidad */
+    color: #333;
+    /* Color del texto del párrafo */
+}
+
+.nota {
+    flex: 1;
+    /* Parte más pequeña para la nota */
+    background-color: #f0f0f0;
+    /* Color de fondo de la nota */
+    padding: 15px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+
+.nota p {
+    font-size: 14px;
+    /* Tamaño del párrafo de la nota */
+    color: #666;
+    /* Color del texto del párrafo de la nota */
+}
+
+.nota img {
+    width: 100%;
+    /* Ancho completo de la imagen en la nota */
+    height: auto;
+    /* Mantiene la relación de aspecto de la imagen */
+    max-width: 100%;
+    /* Ancho máximo de la imagen más pequeña */
+    aspect-ratio: 16 / 9;
+}
+
+.contenido {
+    flex-grow: 1;
+    /* Para que ocupe todo el espacio disponible */
+}
+
+.contenido p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+
+/*Footer - pie de pagina*/
+.container-footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Aquí el último valor (0.7) controla la opacidad */
+}
+
+.container-footer footer {
+    max-width: 800px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer {
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img {
+    width: 220px;
+    /* animation: move-vector 2s linear infinite;
+    padding-right: 0px;
+}
+@keyframes move-vector {
+    0%{
+        transform: translateY(15px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(15px);    
+    }  
+
+    AL SACAR LAS BARRAS DE COMENTARIO EL LOGO FINAL SE MUEVE  */
+}
+
+.container-footer footer .redes-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.container-footer footer .redes-footer .icon-redes-footer {
+    font-size: 20px;
+    margin: 20px;
+    background: #d9d9d9;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #535353;
+}
+
+footer .redes-footer .fa-facebook-f:hover {
+    background: #41579A;
+    color: #fff;
+}
+
+footer .redes-footer .fa-twitter:hover {
+    background: #00acee;
+    color: #fff;
+}
+
+footer .redes-footer .fa-instagram:hover {
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    color: #fff;
+}
+
+footer .redes-footer .fa-whatsapp:hover {
+    background: #25d366;
+    color: #fff;
+}
+
+.container-footer footer hr {
+    margin-top: 5px;
+    border: none;
+    height: 2px;
+    background: #8b8b8b;
+}
+
+.container-footer h4 {
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    color: #4b4b4b;
+    font-weight: 500;
+}
+
+#wrapper-admin .logo {
+
+    width: 50%;
+    /* cambiar el ancho */
+    height: auto;
+    /* Mantener la proporción */
+    border: 2px solid #000;
+    /* Agregar un borde */
+    /* También puedes cambiar la imagen de fondo, si es necesario */
+    background-image: url('images/news.png');
+    background-size: cover;
+    /* Ajustar el tamaño */
+}
+
+#footer .container span {
+    font-size: 15px;
+}
+
+.ocultar {
+    display: none;
+    /* Oculta el elemento */
+}
+
+
+
+/* RESPONSIVE  */
+
+@media (max-width: 1400px) {
+
+    header {
+        top:290px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        top:300px;
+    }
+
+    .enc {
+        width: 200%;
+    }
+
+    .carousel-container {
+        margin-top: 40px;
+    }
+
+    .redes-container {
+        display: flow-root;
+    }
+
+    .news-content {
+        font-size: 14px;
+        bottom: 13px;
+        /* Tamaño de fuente reducido para pantallas pequeñas */
+    }
+
+    .news-item {
+        height: auto;
+    }
+
+    .nav-list {
+        display: none;
+        /* Oculta el menú por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        /* Justo debajo del header */
+        width: 100%;
+        background: #54A5DB;
+        align-items: center;
+    }
+
+    .nav-list.active {
+        display: flex;
+        /* Muestra el menú cuando está activo */
+    }
+
+    .menu-toggle {
+        display: flex;
+        /* Muestra el botón de menú en móviles */
+        padding: 20px;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    header {
+        display: flow-root;
+    }
+
+    .contenido {
+        display: flow-root;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 40vh;
+        /* Altura ajustada para dispositivos móviles */
+    }
+
+    .news-content {
+        font-size: 12px;
+        /* Tamaño de fuente reducido para dispositivos móviles */
+    }
+
+    .redes-container {
+        display: flow;
+    }
+
+    .enc {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    article {
+        container: card/inline-size;
+    }
+
+    .article-body p {
+        display: none;
+    }
+}
+
+@container card (min-width: 380px) {
+    .article-wrapper {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 16px;
+    }
+
+    .article-body {
+        padding-left: 0;
+    }
+
+    figure {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    figure img {
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+
+    .red span {
+        font-size: 15px;
+        line-height: 1;
+    }
+
+
+
+
+}
+
+@media (max-width: 500px) {
+
+    .redes-container {
+        display: block;
+    }
+
+    .red p {
+        font-size: 15px;
+        margin-right: 0px;
+    }
+
+    .contenido {
+        max-width: 100%;
+        margin: 0px;
+        padding: 10px;
+        display: flow-root;
+        gap: 70px;
+    }
+
+    .carousel-container {
+        max-width: 1100px;
+        margin: 10px auto;
+        margin-top: 65px;
+    }
+
+    .busq {
+        padding: 10px;
+    }
+
+    header {
+        top: 290px;
+    }
+
+    .logo {
+        height: auto;
+    }
+
+}
